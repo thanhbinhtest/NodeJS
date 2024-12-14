@@ -1,3 +1,2 @@
-/node_modules
-/buil 
 .env
+node_modules/
