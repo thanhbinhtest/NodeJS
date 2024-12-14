@@ -1,11 +1,12 @@
 // Import thư viện Express
 const express = require('express');
-// Đặt cổng để chạy máy chủ
+
+const database= require("./config/database")
 require('dotenv').config();
 
 const PORT = process.env.PORT; // Đọc cổng từ file .env
 const route = require("./routes/client/index.route");
-
+database.connect();
 // Khởi tạo một ứng dụng Express
 const app = express();
 
