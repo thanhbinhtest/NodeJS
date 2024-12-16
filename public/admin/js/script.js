@@ -44,3 +44,30 @@ if (formsearch){
     });
 }
 //endformsearch
+
+//panigation
+const buttonPagination=document.querySelectorAll("[button-pagination]")
+console.log(buttonPagination);
+if (buttonPagination)
+{
+    let currentUrl = new URL(window.location.href);
+
+    // Thêm sự kiện click cho mỗi nút
+    buttonPagination.forEach(button => {
+        button.addEventListener("click", (event) => {
+            
+            const page = button.getAttribute("button-pagination"); 
+           
+
+           
+                currentUrl.searchParams.set("page", page); 
+            
+
+          
+
+            // Điều hướng tới URL mới
+            window.location.href = currentUrl.href;
+        });
+    });
+}
+//panigation
